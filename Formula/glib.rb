@@ -16,7 +16,6 @@ class Glib < Formula
     sha256 x86_64_linux:   "6bf1b47d083b90834e59c72f3ba6d6a8edc7637bcecba7d3ff769eff8d66a946"
   end
 
-  depends_on "dbus" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
@@ -26,6 +25,7 @@ class Glib < Formula
   depends_on "pcre"
 
   on_linux do
+    depends_on "dbus" => :build
     depends_on "util-linux"
   end
 
